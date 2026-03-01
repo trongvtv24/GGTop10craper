@@ -20,7 +20,9 @@ def main():
         sys.exit(1)
         
     top_10 = results.get("top_10", [])
-    print(f"✅ Đã tải được {len(top_10)} bài viết và {len(results.get('paa', []))} câu hỏi PAA.")
+    
+    # Optional logic to display a friendly message regarding skipped URLs if the organic_results were originally larger
+    print(f"✅ Đã tải được {len(top_10)} bài viết (đã lọc bỏ Shopee, Facebook, Lazada) và {len(results.get('paa', []))} câu hỏi PAA.")
     
     # Bắt đầu bóc tách nội dung
     for index, item in enumerate(top_10):
