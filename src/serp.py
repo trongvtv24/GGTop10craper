@@ -8,7 +8,7 @@ def search_google(keyword: str, blacklist: list = None) -> dict:
     Skips domains in the blacklist.
     """
     if blacklist is None:
-        blacklist = ["shopee.vn", "facebook.com", "lazada.vn"]
+        blacklist = ["shopee.vn", "facebook.com", "lazada.vn", "websosanh.vn", "thitruongsi.com"]
     env_path = os.path.join(os.path.dirname(__file__), "..", "configs", ".env")
     load_dotenv(env_path)
     api_key = os.environ.get("SERPAPI_KEY")
